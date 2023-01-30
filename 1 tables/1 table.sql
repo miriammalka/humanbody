@@ -1,5 +1,10 @@
 use humanbodyDB
-go 
-create table dbo.humanbody(id int not null identity primary key, 
-bodypart varchar(100) not null, 
-num int not null)
+go
+drop table if exists body
+go
+create table dbo.body(
+	id int not null identity primary key, 
+	creaturetype varchar(25) not null,
+	bodypart varchar(100) not null, 
+	num int not null
+)
